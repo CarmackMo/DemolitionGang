@@ -23,7 +23,7 @@ public class Excavator : DestroyableSingleton<Excavator>
     public float bucketAngularSpeedP = 0.0f;
     public float bucketUpperBound = 0.0f;
     public float buckerLowerBound = 0.0f;
-    public bool closeBreak = false;
+    //public bool closeBreak = false;
 
     [Header("Engine")]
     public float igniteInterval = 0.0f;
@@ -288,9 +288,9 @@ public class Excavator : DestroyableSingleton<Excavator>
             }
             else if (Time.fixedTime - boomLimitStartTime >= boomBreakTime)
             {
-                if (!closeBreak)
+                if (!gameManager.closeBreak)
                 {
-                    Debug.LogWarning("Boom is borken!!");
+                    UnityEngine.Debug.LogWarning("Boom is borken!!");
                     isBoomReachLimit = false;
                     boomState = DamageState.BROKEN;
                 }
@@ -334,9 +334,9 @@ public class Excavator : DestroyableSingleton<Excavator>
             }
             else if (Time.fixedTime - armLimitStartTime >= armBreakTime)
             {
-                if (!closeBreak)
+                if (!gameManager.closeBreak)
                 {
-                    Debug.LogWarning("Arm is borken!!");
+                    UnityEngine.Debug.LogWarning("Arm is borken!!");
                     isArmReachLimit = false;
                     armState = DamageState.BROKEN;
                 }
@@ -534,7 +534,7 @@ public class Excavator : DestroyableSingleton<Excavator>
                 engineIdleSource = soundManager.FindAvailableLoopAudioSource();
                 soundManager.PlayInLoop(engineIdleSource, "Engine_Idling");
 
-                Debug.Log("Engine ON");
+                UnityEngine.Debug.Log("Engine ON");
                 yield break;
             }
 
