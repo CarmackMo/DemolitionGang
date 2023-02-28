@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using SoundEffect;
 using System.Diagnostics;
+using TMPro;
 
 public class Excavator : DestroyableSingleton<Excavator>
 {
@@ -56,6 +57,7 @@ public class Excavator : DestroyableSingleton<Excavator>
     private SoundEffectManager soundManager;
     public int EngineRPM => engineRPM;
     public Action<string> hornAction;
+    public TextMeshProUGUI TxtBoomOrArmBrkTip;
 
 
     public enum EngineState { ON = 1, IGNITE = 0, OFF = -1 }
@@ -82,6 +84,7 @@ public class Excavator : DestroyableSingleton<Excavator>
         hardwareManager = HardwareManager.Instance;
         soundManager = SoundEffectManager.Instance;
         hardwareManager.OnStick2ChangeAction += IgniteListener;
+        ShowBreakTip();
 
         InitExcavator();
     }
@@ -293,6 +296,7 @@ public class Excavator : DestroyableSingleton<Excavator>
                     UnityEngine.Debug.LogWarning("Boom is borken!!");
                     isBoomReachLimit = false;
                     boomState = DamageState.BROKEN;
+                    ShowBreakTip();
                 }
             }
         }
@@ -339,6 +343,7 @@ public class Excavator : DestroyableSingleton<Excavator>
                     UnityEngine.Debug.LogWarning("Arm is borken!!");
                     isArmReachLimit = false;
                     armState = DamageState.BROKEN;
+                    ShowBreakTip();
                 }
             }
         }
@@ -407,6 +412,7 @@ public class Excavator : DestroyableSingleton<Excavator>
 
             if (armState == DamageState.BROKEN && Input.GetKeyUp(KeyCode.S))
                 armState = DamageState.FIXED;
+            ShowBreakTip();
         }
     }
 
@@ -636,6 +642,18 @@ public class Excavator : DestroyableSingleton<Excavator>
         //GUI.TextArea(new Rect(0, 240, 250, 40), $"JoyStick Button : {Input.GetKey(KeyCode.Joystick1Button2)}");
     }
 
-
-
+    private void ShowBreakTip()
+    {
+        TxtBoomOrArmBrkTip.gameObject.SetActive(boomState == DamageState.BROKEN || armState == DamageState.BROKEN);
+        if (boomState == DamageState.BROKEN && armState == DamageState.BROKEN)
+        {
+            TxtBoomOrArmBrkTip.text = "Boom and Arm overload! Need to repair!";
+        } else if(boomState == DamageState.BROKEN)
+        {
+            TxtBoomOrArmBrkTip.text = "Boom overload! Need to repair!";
+        } else if(armState == DamageState.BROKEN)
+        {
+            TxtBoomOrArmBrkTip.text = "Arm overload! Need to repair!";
+        }
+    }
 }

@@ -25,6 +25,7 @@ public class JoystickStatePanel : DestroyableSingleton<JoystickStatePanel>
 
     private GameplayManager gameManager;
     private bool isReadyToStart = false;
+    public GameObject LittleControl;
 
 
     protected override void Awake()
@@ -39,6 +40,8 @@ public class JoystickStatePanel : DestroyableSingleton<JoystickStatePanel>
     protected override void Start()
     {
         base.Start();
+
+        ShowLittleControl(false);
 
         gameManager = GameplayManager.Instance;
 
@@ -151,11 +154,21 @@ public class JoystickStatePanel : DestroyableSingleton<JoystickStatePanel>
     {
         Hide();
         gameManager.StartGame();
+        ShowLittleControl(true);
     }
 
 
     private void OnClickCloseButton()
     {
         Hide();
+    }
+
+    public void ShowLittleControl(bool value)
+    {
+        if(LittleControl == null)
+        {
+            return;
+        }
+        LittleControl.SetActive(value);
     }
 }
