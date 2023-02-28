@@ -24,6 +24,7 @@ public class Excavator : DestroyableSingleton<Excavator>
     public float bucketAngularSpeedP = 0.0f;
     public float bucketUpperBound = 0.0f;
     public float buckerLowerBound = 0.0f;
+    public float quickFixTime = 3.0f;
     //public bool closeBreak = false;
 
     [Header("Engine")]
@@ -45,11 +46,16 @@ public class Excavator : DestroyableSingleton<Excavator>
     public Animator leftTrackAnimator;
 
     private int engineRPM = 0;
+    private bool speedUp = false;
+    private bool startBucket = true;
     private bool isBucketRotating = false;
     private bool isBoomReachLimit = false;
     private bool isArmReachLimit = false;
+    private bool isQuickFixStart = false;
     private float boomLimitStartTime = 0.0f;
     private float armLimitStartTime = 0.0f;
+    private float quickFixStartTime = 0.0f;
+    private KeyCode curKey = 0;
     private AudioSource engineIdleSource;
     private AudioSource engineAccelSource;
     private GameplayManager gameManager;
@@ -414,6 +420,29 @@ public class Excavator : DestroyableSingleton<Excavator>
                 armState = DamageState.FIXED;
             ShowBreakTip();
         }
+        else
+        {
+            if (hardwareManager.IsWireConnected == true &&
+               (boomState == DamageState.BROKEN || armState == DamageState.BROKEN))
+            {
+                isQuickFixStart = true;
+                quickFixStartTime = Time.fixedTime;
+            }
+
+            if (hardwareManager.IsWireConnected == true && isQuickFixStart == true)
+            {
+                if (quickFixStartTime - Time.fixedTime >= quickFixTime)
+                {
+                    boomState = DamageState.FIXED;
+                    armState = DamageState.FIXED;
+                    isQuickFixStart = false;
+                }
+            }
+            else if (hardwareManager.IsWireConnected == false && isQuickFixStart == true)
+            {
+                isQuickFixStart = false;
+            }
+        }
     }
 
     public void UpdateEngineRMP()
@@ -450,7 +479,6 @@ public class Excavator : DestroyableSingleton<Excavator>
         }
     }
 
-    private bool speedUp = false;
 
     private void BucketListener()
     {
@@ -553,8 +581,6 @@ public class Excavator : DestroyableSingleton<Excavator>
         yield break;
     }
 
-    private KeyCode curKey = 0;
-    private bool startBucket = true;
 
     private IEnumerator ForwardBucketCoroutine()
     {
@@ -575,6 +601,7 @@ public class Excavator : DestroyableSingleton<Excavator>
         isBucketRotating = false;
         yield break;
     }
+
 
     private IEnumerator BackwardBucketCoroutine()
     {
