@@ -6751,12 +6751,12 @@ PrefabInstance:
     - target: {fileID: 400471497053904173, guid: e5dd9da8ff61fa44c959bb414a7082ee,
         type: 3}
       propertyPath: useQuickFix
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400471497053904173, guid: e5dd9da8ff61fa44c959bb414a7082ee,
         type: 3}
       propertyPath: manualIgnite
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4449397903789646353, guid: e5dd9da8ff61fa44c959bb414a7082ee,
         type: 3}
@@ -8542,13 +8542,13 @@ Transform:
   - {fileID: 493927848}
   - {fileID: 1604235663}
   - {fileID: 1506152866}
+  - {fileID: 1777727322}
   - {fileID: 2008389654}
   - {fileID: 507760166}
   - {fileID: 2058914357}
   - {fileID: 844511234}
   - {fileID: 400401073}
   - {fileID: 2081163599}
-  - {fileID: 1777727322}
   - {fileID: 949790149}
   - {fileID: 513830675}
   - {fileID: 935613724}
@@ -16379,7 +16379,7 @@ Transform:
   - {fileID: 1932361662}
   - {fileID: 769237791}
   m_Father: {fileID: 793782026}
-  m_RootOrder: 9
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1785983899
 GameObject:

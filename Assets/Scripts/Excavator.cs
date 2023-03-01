@@ -129,7 +129,7 @@ public class Excavator : DestroyableSingleton<Excavator>
 
     private void InitExcavator()
     {
-        if (gameManager.manualIgnite)
+        if (!gameManager.manualIgnite)
         {
             engineState = EngineState.ON;
         }
@@ -422,7 +422,8 @@ public class Excavator : DestroyableSingleton<Excavator>
         }
         else
         {
-            if (hardwareManager.IsWireConnected == true &&
+            if (isQuickFixStart == false && 
+                hardwareManager.IsWireConnected == true &&
                (boomState == DamageState.BROKEN || armState == DamageState.BROKEN))
             {
                 isQuickFixStart = true;
@@ -431,16 +432,18 @@ public class Excavator : DestroyableSingleton<Excavator>
 
             if (hardwareManager.IsWireConnected == true && isQuickFixStart == true)
             {
-                if (quickFixStartTime - Time.fixedTime >= quickFixTime)
+                if (Time.fixedTime - quickFixStartTime >= quickFixTime)
                 {
                     boomState = DamageState.FIXED;
                     armState = DamageState.FIXED;
                     isQuickFixStart = false;
+                    UnityEngine.Debug.LogWarning("Quck fix finish!");
                 }
             }
             else if (hardwareManager.IsWireConnected == false && isQuickFixStart == true)
             {
                 isQuickFixStart = false;
+                UnityEngine.Debug.LogWarning("Quck fix unfinish!");
             }
         }
     }

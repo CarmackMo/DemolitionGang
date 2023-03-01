@@ -18,6 +18,7 @@ public class HardwareInput : MonoBehaviour
     public Action<string> action;
     public Action<string> actionIgnite;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +44,7 @@ public class HardwareInput : MonoBehaviour
     //5. An integer passed by a string, which indicates how far the lever is pushed up (compared with its initial position, "0");
     void DataReceived(string data, UduinoDevice board)
     {
+
         if (data == "P")
         {
             buttonPressedThisFrame = true;
