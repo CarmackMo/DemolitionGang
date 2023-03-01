@@ -142,12 +142,12 @@ public class GameplayManager : DestroyableSingleton<GameplayManager>
                 float stickValue;
 
                 /* Right joystick 3 use the input from external hardware */
-                if (config.stickName == "RightJoyStickS3")
-                    stickValue = HardwareManager.Instance.Joystick1;
-                else
-                    stickValue = Input.GetAxis(config.stickName);
+                //if (config.stickName == "RightJoyStickS3")
+                //    stickValue = HardwareManager.Instance.Joystick1;
+                //else
+                //    stickValue = Input.GetAxis(config.stickName);
+                stickValue = Input.GetAxis(config.stickName);
 
-                //Debug.Log($"Stick {stickName} value {value}");
                 if (stickValue <= 1 && stickValue > 0.6)
                     config.stickState = StickState.ACCELERATE;
                 else if (stickValue <= 0.6 && stickValue > 0.2)
