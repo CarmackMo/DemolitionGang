@@ -108,10 +108,11 @@ public class JoystickStatePanel : DestroyableSingleton<JoystickStatePanel>
 
             if (gameManager.useKeyBoard == false)
             {
-                if (config.stickID != stickIndicators[5].stickID)
-                    stickValue = Input.GetAxis(config.stickID);
-                else
-                    stickValue = HardwareManager.Instance.Joystick1;
+                //if (config.stickID != stickIndicators[5].stickID)
+                //    stickValue = Input.GetAxis(config.stickID);
+                //else
+                //    stickValue = HardwareManager.Instance.Joystick1;
+                stickValue = Input.GetAxis(config.stickID);
             }
             else
             {
