@@ -85,6 +85,18 @@ public class GameplayManager : DestroyableSingleton<GameplayManager>
         if (Input.GetKey(KeyCode.Escape))
             ExitGame();
 
+
+
+
+
+        //if (Input.GetKey(KeyCode.M))
+        //    Debug.LogWarning("Get key is true!");
+        //if (Input.GetKeyDown(KeyCode.M))
+        //    Debug.LogWarning("Get key down is true!");
+        //if (Input.GetKeyUp(KeyCode.M))
+        //    Debug.LogWarning("Get key up is true!");
+
+
     }
 
 

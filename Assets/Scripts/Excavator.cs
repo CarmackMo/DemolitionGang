@@ -142,7 +142,7 @@ public class Excavator : DestroyableSingleton<Excavator>
         {
             float leftSpeed, rightSpeed, speed;
             GameplayManager.JoySitckConfig leftStick = gameManager.sticks[0];
-            GameplayManager.JoySitckConfig rightStick = gameManager.sticks[3];
+            GameplayManager.JoySitckConfig rightStick = gameManager.sticks[5];
 
             /* First control plan: two joystick control two vehicle tracks respectively */
             if (leftStick.stickState == GameplayManager.StickState.DECELERATE)
@@ -222,7 +222,7 @@ public class Excavator : DestroyableSingleton<Excavator>
             float angularSpeed;
             Vector3 axis = transform.up;
             GameplayManager.JoySitckConfig leftStick = gameManager.sticks[0];
-            GameplayManager.JoySitckConfig rightStick = gameManager.sticks[3];
+            GameplayManager.JoySitckConfig rightStick = gameManager.sticks[5];
 
             /* First control plan: two joystick control two vehicle tracks respectively */
             angularSpeed = ((int)leftStick.stickState - (int)rightStick.stickState) * (int)gearState * angualrSpeedRate * Time.deltaTime;
@@ -317,7 +317,7 @@ public class Excavator : DestroyableSingleton<Excavator>
         float angularSpeed = 0.0f;
         if (engineState == EngineState.ON && armState == DamageState.FIXED)
         {
-            GameplayManager.JoySitckConfig stick = gameManager.sticks[4];
+            GameplayManager.JoySitckConfig stick = gameManager.sticks[3];
             angularSpeed = (int)stick.stickState * angualrSpeedRate * Time.deltaTime;
             Vector3 axis = arm.transform.forward;
             arm.transform.Rotate(axis, angularSpeed, Space.World);
@@ -363,7 +363,7 @@ public class Excavator : DestroyableSingleton<Excavator>
         if (engineState == EngineState.ON)
         {
             GearState currentState;
-            GameplayManager.JoySitckConfig stick = gameManager.sticks[5];
+            GameplayManager.JoySitckConfig stick = gameManager.sticks[4];
             switch (stick.stickState)
             {
                 case GameplayManager.StickState.ACCELERATE:
