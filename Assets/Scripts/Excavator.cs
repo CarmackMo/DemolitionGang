@@ -61,7 +61,9 @@ public class Excavator : DestroyableSingleton<Excavator>
     private GameplayManager gameManager;
     private HardwareManager hardwareManager;
     private SoundEffectManager soundManager;
+
     public int EngineRPM => engineRPM;
+    public Vector3 respawnPoint;
     public Action<string> hornAction;
     public TextMeshProUGUI TxtBoomOrArmBrkTip;
 
@@ -86,6 +88,7 @@ public class Excavator : DestroyableSingleton<Excavator>
     {
         base.Start();
 
+        respawnPoint = transform.position;
         gameManager = GameplayManager.Instance;
         hardwareManager = HardwareManager.Instance;
         soundManager = SoundEffectManager.Instance;
@@ -116,6 +119,7 @@ public class Excavator : DestroyableSingleton<Excavator>
 
             BucketListener();
             HornListener();
+            RespawnListener();
         }
 
 
@@ -541,6 +545,18 @@ public class Excavator : DestroyableSingleton<Excavator>
             hornAction.Invoke("horn");
         }
     }
+
+
+    private void RespawnListener()
+    {
+        if (Input.GetKeyUp(KeyCode.Return))
+        {
+            transform.position = respawnPoint;
+            transform.rotation = Quaternion.identity;
+        }
+    }
+
+
 
 
     private IEnumerator IgniteCoroutine()

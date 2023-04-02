@@ -35,7 +35,6 @@ public class HardwareManager : DontDestroySingleton<HardwareManager>
 
         action += Test;
         actionIgnite += Test;
-
     }
 
     protected override void Start()

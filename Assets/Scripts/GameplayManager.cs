@@ -23,9 +23,9 @@ public class GameplayManager : DestroyableSingleton<GameplayManager>
     /* Left stick 1 (Q-W): control the left track; 
      * Left stick 2 (E-R): control the cab rotation;
      * Left stick 3 (T-Y): control the boom rotation; 
-     * Right stick 1 (U-I): control the right track;
-     * Right stick 2 (O-P): control the arm rotation; 
-     * Right stick 3 ([-]): control the gear shifting */
+     * Right stick 1 (U-I): control the arm rotation;
+     * Right stick 2 (O-P): control the gear shifting; 
+     * Right stick 3 ([-]): control the right track */
     public List<JoySitckConfig> sticks = new List<JoySitckConfig>();
     public List<JoystickLevelConfig> stickLevels = new List<JoystickLevelConfig>();
 
