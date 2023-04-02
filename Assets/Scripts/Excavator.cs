@@ -61,11 +61,11 @@ public class Excavator : DestroyableSingleton<Excavator>
     private GameplayManager gameManager;
     private HardwareManager hardwareManager;
     private SoundEffectManager soundManager;
+    private GameplayPanel gameplayPanel;
 
     public int EngineRPM => engineRPM;
     public Vector3 respawnPoint;
     public Action<string> hornAction;
-    public TextMeshProUGUI TxtBoomOrArmBrkTip;
 
 
     public enum EngineState { ON = 1, IGNITE = 0, OFF = -1 }
@@ -92,8 +92,8 @@ public class Excavator : DestroyableSingleton<Excavator>
         gameManager = GameplayManager.Instance;
         hardwareManager = HardwareManager.Instance;
         soundManager = SoundEffectManager.Instance;
+        gameplayPanel = GameplayPanel.Instance;
         hardwareManager.OnStick2ChangeAction += IgniteListener;
-        ShowBreakTip();
 
         InitExcavator();
     }
@@ -306,7 +306,10 @@ public class Excavator : DestroyableSingleton<Excavator>
                     UnityEngine.Debug.LogWarning("Boom is borken!!");
                     isBoomReachLimit = false;
                     boomState = DamageState.BROKEN;
-                    ShowBreakTip();
+
+                    string borkenPart = armState == DamageState.BROKEN ? "Boom and Arm" : "Boom";
+                    gameplayPanel.UpdateBroken(borkenPart);
+                    gameplayPanel.UpdateBrokenVisibility(true);
                 }
             }
         }
@@ -353,7 +356,10 @@ public class Excavator : DestroyableSingleton<Excavator>
                     UnityEngine.Debug.LogWarning("Arm is borken!!");
                     isArmReachLimit = false;
                     armState = DamageState.BROKEN;
-                    ShowBreakTip();
+
+                    string borkenPart = boomState == DamageState.BROKEN ? "Boom and Arm" : "Arm";
+                    gameplayPanel.UpdateBroken(borkenPart);
+                    gameplayPanel.UpdateBrokenVisibility(true);
                 }
             }
         }
@@ -418,11 +424,23 @@ public class Excavator : DestroyableSingleton<Excavator>
         if (gameManager.useQuickFix)
         {
             if (boomState == DamageState.BROKEN && Input.GetKeyUp(KeyCode.A))
+            {
                 boomState = DamageState.FIXED;
 
+                string borkenPart = armState == DamageState.BROKEN ? "Arm" : "";
+                gameplayPanel.UpdateBroken(borkenPart);
+            }
+
             if (armState == DamageState.BROKEN && Input.GetKeyUp(KeyCode.S))
+            {
                 armState = DamageState.FIXED;
-            ShowBreakTip();
+
+                string borkenPart = boomState == DamageState.BROKEN ? "Boom" : "";
+                gameplayPanel.UpdateBroken(borkenPart);
+            }
+
+            if (boomState == DamageState.FIXED && armState == DamageState.FIXED)
+                gameplayPanel.UpdateBrokenVisibility(false);
         }
         else
         {
@@ -441,6 +459,7 @@ public class Excavator : DestroyableSingleton<Excavator>
                     boomState = DamageState.FIXED;
                     armState = DamageState.FIXED;
                     isQuickFixStart = false;
+                    gameplayPanel.UpdateBrokenVisibility(false);
                     UnityEngine.Debug.LogWarning("Quck fix finish!");
                 }
             }
@@ -688,18 +707,18 @@ public class Excavator : DestroyableSingleton<Excavator>
         //GUI.TextArea(new Rect(0, 240, 250, 40), $"JoyStick Button : {Input.GetKey(KeyCode.Joystick1Button2)}");
     }
 
-    private void ShowBreakTip()
-    {
-        TxtBoomOrArmBrkTip.gameObject.SetActive(boomState == DamageState.BROKEN || armState == DamageState.BROKEN);
-        if (boomState == DamageState.BROKEN && armState == DamageState.BROKEN)
-        {
-            TxtBoomOrArmBrkTip.text = "Boom and Arm overload! Need to repair!";
-        } else if(boomState == DamageState.BROKEN)
-        {
-            TxtBoomOrArmBrkTip.text = "Boom overload! Need to repair!";
-        } else if(armState == DamageState.BROKEN)
-        {
-            TxtBoomOrArmBrkTip.text = "Arm overload! Need to repair!";
-        }
-    }
+    //private void ShowBreakTip()
+    //{
+    //    TxtBoomOrArmBrkTip.gameObject.SetActive(boomState == DamageState.BROKEN || armState == DamageState.BROKEN);
+    //    if (boomState == DamageState.BROKEN && armState == DamageState.BROKEN)
+    //    {
+    //        TxtBoomOrArmBrkTip.text = "Boom and Arm overload! Need to repair!";
+    //    } else if(boomState == DamageState.BROKEN)
+    //    {
+    //        TxtBoomOrArmBrkTip.text = "Boom overload! Need to repair!";
+    //    } else if(armState == DamageState.BROKEN)
+    //    {
+    //        TxtBoomOrArmBrkTip.text = "Arm overload! Need to repair!";
+    //    }
+    //}
 }
