@@ -30,6 +30,7 @@ public class BuildingBreak : MonoBehaviour
             print("碰到的物体：播放动画");
             Invoke("DeleteCollider", DelayDeleteCollider);
             GetComponent<Animator>().enabled = true;
+            Excavator.Instance.CauseDamage();
         }
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 using SoundEffect;
 using System.Diagnostics;
 using TMPro;
+using UnityEngine.UI;
 
 public class Excavator : DestroyableSingleton<Excavator>
 {
@@ -48,7 +49,7 @@ public class Excavator : DestroyableSingleton<Excavator>
     private int engineRPM = 0;
     private bool speedUp = false;
     private bool startBucket = true;
-    private bool isBucketRotating = false;
+    public bool isBucketRotating = false;
     private bool isBoomReachLimit = false;
     private bool isArmReachLimit = false;
     private bool isQuickFixStart = false;
@@ -80,6 +81,11 @@ public class Excavator : DestroyableSingleton<Excavator>
     private DamageState boomState = DamageState.FIXED;
     private DamageState armState = DamageState.FIXED;
 
+    private float curHp = 0;
+    public Image ImgHp = null;
+    public float Damage = 20;
+    public float Hp = 100;
+
 
 
 
@@ -96,6 +102,8 @@ public class Excavator : DestroyableSingleton<Excavator>
         hardwareManager.OnStick2ChangeAction += IgniteListener;
 
         InitExcavator();
+
+        curHp = Hp;
     }
 
 
@@ -721,4 +729,15 @@ public class Excavator : DestroyableSingleton<Excavator>
     //        TxtBoomOrArmBrkTip.text = "Arm overload! Need to repair!";
     //    }
     //}
+
+    private void UpdateHp()
+    {
+        ImgHp.fillAmount = curHp / Hp;
+    }
+
+    public void CauseDamage()
+    {
+        curHp -= Damage;
+        UpdateHp();
+    }
 }
