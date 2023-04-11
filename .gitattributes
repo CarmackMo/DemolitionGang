@@ -1,4 +1,6 @@
-Assets/HoudiniEngineAssetCache/Baked/mix_ground5/Meshes/mix_ground_meshes.asset filter=lfs diff=lfs merge=lfs -text
-Assets/HoudiniEngineAssetCache/Baked/mix_map6/Meshes/mix_map_meshes.asset filter=lfs diff=lfs merge=lfs -text
-Assets/HoudiniEngineAssetCache/Baked/mix_map6/mix_map6.prefab filter=lfs diff=lfs merge=lfs -text
 Assets/Scenes/MissionLevel1.unity filter=lfs diff=lfs merge=lfs -text
+Assets/HoudiniEngineAssetCache/Baked/mix_map/Meshes/mix_map_mesh.asset filter=lfs diff=lfs merge=lfs -text
+Assets/HoudiniEngineAssetCache/Baked/mix_map1/Meshes/mix_map_meshes.asset filter=lfs diff=lfs merge=lfs -text
+Assets/HoudiniEngineAssetCache/Baked/mix_map1.prefab filter=lfs diff=lfs merge=lfs -text
+Assets/HoudiniEngineAssetCache/Baked/mix_map/Meshs/mix_map_meshes.asset filter=lfs diff=lfs merge=lfs -text
+Assets/HoudiniEngineAssetCache/Baked/mix_map/mix_map.prefab filter=lfs diff=lfs merge=lfs -text
