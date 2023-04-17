@@ -24097,7 +24097,7 @@ GameObject:
   - component: {fileID: 19808876}
   - component: {fileID: 19906900}
   m_Layer: 0
-  m_Name: magic_ring_03
+  m_Name: magic_ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
