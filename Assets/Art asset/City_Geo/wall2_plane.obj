@@ -1,0 +1,20 @@
+# This file uses centimeters as units for non-parametric coordinates.
+
+mtllib wall2_plane.mtl
+g default
+v 0.000000 4.141826 0.486398
+v 0.000000 0.016825 0.486398
+v 0.000000 4.141826 -0.486398
+v 0.000000 0.016825 -0.486398
+vt 0.373775 0.990161
+vt 0.373552 0.010852
+vt 0.604501 0.010800
+vt 0.604724 0.990108
+vn 1.000000 0.000000 0.000000
+vn 1.000000 0.000000 0.000000
+vn 1.000000 0.000000 0.000000
+vn 1.000000 0.000000 0.000000
+s off
+g polySurface2 wall_pCube2
+usemtl initialShadingGroup
+f 1/1/1 2/2/2 4/3/3 3/4/4
