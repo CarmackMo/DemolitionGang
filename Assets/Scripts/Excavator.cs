@@ -12,6 +12,8 @@ public class Excavator : DestroyableSingleton<Excavator>
     [Header("Speed")]
     public float speedRate = 15f;
     public float speedDamp = 0.10f;
+    public float speedBonus = 1.0f;
+    public bool speedBonusTrigger = false;
 
     [Header("Mechanical Arm")]
     public float angualrSpeedRate = 15f;
@@ -195,7 +197,8 @@ public class Excavator : DestroyableSingleton<Excavator>
             //}
 
             Vector3 direction = transform.right;
-            speed = speed * (int)gearState * speedDamp * Time.deltaTime;
+            float bonus = speedBonusTrigger ? speedBonus : 1;
+            speed = speed * (int)gearState * speedDamp * bonus * Time.deltaTime;
             transform.Translate(direction * speed, Space.World);
 
 
@@ -502,6 +505,12 @@ public class Excavator : DestroyableSingleton<Excavator>
             cameraTPS.enabled = !cameraFPS.enabled;
             cameraTPS.GetComponent<AudioListener>().enabled = !cameraFPS.enabled;
         }
+    }
+
+
+    public void UpdateSpeedBounsTrigger(bool trigger)
+    {
+        speedBonusTrigger = trigger;
     }
 
 
