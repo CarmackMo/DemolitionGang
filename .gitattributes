@@ -4,3 +4,4 @@ Assets/HoudiniEngineAssetCache/Baked/mix_map1.prefab filter=lfs diff=lfs merge=l
 Assets/HoudiniEngineAssetCache/Baked/mix_map/Meshs/mix_map_meshes.asset filter=lfs diff=lfs merge=lfs -text
 Assets/HoudiniEngineAssetCache/Baked/mix_map/mix_map.prefab filter=lfs diff=lfs merge=lfs -text
 Assets/HoudiniEngineAssetCache/Baked/mix_map/Meshes/mix_map_meshes.asset filter=lfs diff=lfs merge=lfs -text
+Assets/Scenes/MissionLevel_Hang.unity filter=lfs diff=lfs merge=lfs -text
