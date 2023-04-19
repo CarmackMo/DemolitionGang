@@ -8,8 +8,10 @@ public class CollisionCallback : MonoBehaviour
     private BoxCollider boxCollider;
     private CapsuleCollider capsuleCollider;
     private SphereCollider sphereCollider;
+    private MeshCollider meshCollider;
 
-    private List<Action> callbackList = new List<Action>();
+    /* Will pass the gameobject of this script back to the callback function */
+    private List<Action<GameObject>> callbackList = new List<Action<GameObject>>();
     private List<string> targetTags = new List<string>();
     private List<Type> targetTypes = new List<Type>();
 
@@ -39,8 +41,10 @@ public class CollisionCallback : MonoBehaviour
         boxCollider = GetComponent<BoxCollider>();
         capsuleCollider = GetComponent<CapsuleCollider>();
         sphereCollider = GetComponent<SphereCollider>();
+        meshCollider = GetComponent<MeshCollider>();
 
-        if (boxCollider == null && capsuleCollider == null && sphereCollider == null)
+        if (boxCollider == null && capsuleCollider == null && 
+            sphereCollider == null && meshCollider == null)
         {
             Debug.LogError("CollisionCallback: collider component is required to use this script!");
         }
@@ -69,9 +73,9 @@ public class CollisionCallback : MonoBehaviour
 
         if (isTarget == true)
         {
-            foreach(Action callback in callbackList)
+            foreach(Action<GameObject> callback in callbackList)
             {
-                callback.Invoke();
+                callback.Invoke(gameObject);
             }
         }
     }
@@ -79,7 +83,7 @@ public class CollisionCallback : MonoBehaviour
     /// <summary>
     /// Must provide target type or target tag to successfully register the callback function
     /// </summary>
-    public void AddCallback(Action callback, Type targetType = null, string targetTag = null)
+    public void AddCallback(Action<GameObject> callback, Type targetType = null, string targetTag = null)
     {
         if (targetType != null)
             targetTypes.Add(targetType);

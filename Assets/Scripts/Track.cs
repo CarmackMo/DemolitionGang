@@ -16,26 +16,26 @@ public class Track : MonoBehaviour
 
     private void Init()
     {
-        foreach(CollisionCallback collisionCallback in collisionCallbackList)
+        foreach(CollisionCallback callback in collisionCallbackList)
         {
-            collisionCallback.AddCallback(OnOutOfBound, null, "Excavator");
+            callback.AddCallback(OnOutOfBound, null, "Excavator");
         }
 
         enterCallback.AddCallback(OnExcavatorEnter, null, "Excavator");
         exitCallback.AddCallback(OnExcavatorExit, null, "Excavator");
     }
 
-    private void OnOutOfBound()
+    private void OnOutOfBound(GameObject hitObject)
     {
         Debug.LogWarning("Excavator hits the boundary of the track!! ");
     }
 
-    private void OnExcavatorEnter()
+    private void OnExcavatorEnter(GameObject hitObject)
     {
         Excavator.Instance.UpdateSpeedBounsTrigger(true);
     }
 
-    private void OnExcavatorExit()
+    private void OnExcavatorExit(GameObject hitObject)
     {
         Excavator.Instance.UpdateSpeedBounsTrigger(false);
     }
