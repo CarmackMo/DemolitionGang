@@ -16,19 +16,19 @@ public class GameStateManager : MonoBehaviour
 
     private void Update()
     {
-        if (EscapeAreaScript != null && EscapeAreaScript.escaped)
+        if (CountdownTriggerScript != null && CountdownTriggerScript.escaped)
         {
             if (SceneManager.GetActiveScene().name == "MissionLevel_Joe&Allen")
             {
                 level1Completed = true;
                 SceneManager.LoadScene("MissionLevel_Hang");
             }
-            else if (CountdownTriggerScript != null && CountdownTriggerScript.TimerEnded && !EscapeAreaScript.escaped)
+            else if (CountdownTriggerScript != null && CountdownTriggerScript.TimerEnded && !CountdownTriggerScript.escaped)
             {
                 if (!isRestarting)
                 {
                     isRestarting = true;
-                    StartCoroutine(RestartLevelAfterDelay(5));
+                   StartCoroutine(RestartLevelAfterDelay(5));
                 }
             }
             else if (SceneManager.GetActiveScene().name == "MissionLevel_Hang")

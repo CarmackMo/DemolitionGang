@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mainmenu.unity
     guid: 508d2c5284b1e9e49be3b4880b0fa36c
+  - enabled: 1
+    path: Assets/Scenes/MissionLevel_Joe&Allen.unity
+    guid: 7343d77f599b41040ae40642d9495541
+  - enabled: 1
+    path: Assets/Scenes/MissionLevel_Hang.unity
+    guid: 671c0095312631543a3a5e96c67c866c
   m_configObjects: {}
