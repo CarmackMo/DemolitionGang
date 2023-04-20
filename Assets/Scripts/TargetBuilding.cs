@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class TargetBuilding : MonoBehaviour
 {
+    public ParticleSystem smoke;
     public List<CollisionCallback> collisionCallbacks = new List<CollisionCallback>();
     public List<Animator> animators = new List<Animator>();
 
+    public int fallThreshold = 0;
     private int fallenWalls = 0;
 
 
@@ -21,12 +23,14 @@ public class TargetBuilding : MonoBehaviour
         {
             if (animator.gameObject == hitObject)
             {
-                animator.SetBool("IsHit", true);
-                fallenWalls++;
+                if (animator.GetBool("IsHit") == false)
+                    fallenWalls++;
+
+                animator.SetBool("IsHit", true); 
             }
         }
 
-        if (fallenWalls > 5)
+        if (fallenWalls > fallThreshold)
         {
             foreach(Animator animator in animators)
             {
@@ -35,6 +39,9 @@ public class TargetBuilding : MonoBehaviour
                     animator.SetBool("IsHit", true);
                 }
             }
+
+            if (smoke != null)
+                smoke.Play();
         }
     }
 
