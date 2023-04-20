@@ -11,6 +11,13 @@ public class CountdownTrigger : MonoBehaviour
     public TextMeshProUGUI countdownText;
     public TextMeshProUGUI messageText;
 
+    private bool timerEnded = false;
+
+    public bool TimerEnded
+    {
+        get { return timerEnded; }
+    }
+
     public bool IsCountdownStarted()
     {
         return countdownStarted;
@@ -21,7 +28,7 @@ public class CountdownTrigger : MonoBehaviour
         escaped = value;
     }
 
-    private bool escaped = false;
+    public bool escaped = false;
 
     private bool countdownStarted = false;
     private float countdownTime = 300f; 
@@ -46,6 +53,7 @@ public class CountdownTrigger : MonoBehaviour
         messageText.CrossFadeAlpha(0f, 0.5f, false);
     }
 
+
     private IEnumerator Countdown()
     {
         while (countdownTime > 0)
@@ -63,6 +71,7 @@ public class CountdownTrigger : MonoBehaviour
                 else
                 {
                     StartCoroutine(ShowMessage("Mission Failed！", messageDisplayTime));
+                    timerEnded = true;
                 }
                 countdownStarted = false;
                 countdownText.text = "";

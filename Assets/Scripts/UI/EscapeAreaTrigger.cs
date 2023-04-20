@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class EscapeAreaTrigger : MonoBehaviour
 {
+    public bool escaped
+    {
+        get { return escaped; }
+    }
+
     public CountdownTrigger triggerCountdownScript;
 
     private void OnTriggerEnter(Collider other)
