@@ -779,6 +779,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5472890238157026947, guid: b2354e3e69a86a3448d1830af66828aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bcee95c999525304d9d10376752238d8, type: 2}
+    - target: {fileID: -2342553381385071965, guid: b2354e3e69a86a3448d1830af66828aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Excavator_UpArm
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b2354e3e69a86a3448d1830af66828aa,
         type: 3}
       propertyPath: m_Name
@@ -2171,12 +2181,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 909724046181714879, guid: 65ff01c5e2f168b418094cf981a50e13,
+        type: 3}
+      propertyPath: m_Name
+      value: Excavator_body
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 65ff01c5e2f168b418094cf981a50e13,
         type: 3}
       propertyPath: m_Name
       value: Excavator_Cab
       objectReference: {fileID: 0}
     - target: {fileID: 8449996119470504636, guid: 65ff01c5e2f168b418094cf981a50e13,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bcee95c999525304d9d10376752238d8, type: 2}
+    - target: {fileID: 8750282390164179470, guid: 65ff01c5e2f168b418094cf981a50e13,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
