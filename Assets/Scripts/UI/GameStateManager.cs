@@ -6,7 +6,8 @@ public class GameStateManager : MonoBehaviour
 {
     public CountdownTrigger CountdownTriggerScript;
     public EscapeAreaTrigger EscapeAreaScript;
-    public GameObject endScreen;
+    public Animator endScreenAnimator;
+
     public float endScreenDisplayTime = 5f;
 
     private bool level1Completed = false;
@@ -46,11 +47,16 @@ public class GameStateManager : MonoBehaviour
 
     private IEnumerator ShowEndScreenAndReturnToMainMenu()
     {
-        endScreen.SetActive(true);
-        yield return new WaitForSeconds(endScreenDisplayTime);
-        endScreen.SetActive(false);
-        SceneManager.LoadScene("MainMenu");
+        endScreenAnimator.gameObject.SetActive(true); 
+        yield return new WaitForSeconds(endScreenDisplayTime); 
+
+        endScreenAnimator.SetTrigger("typlaying"); 
+        yield return new WaitForSeconds(endScreenAnimator.GetCurrentAnimatorStateInfo(0).length); 
+
+        endScreenAnimator.gameObject.SetActive(false); 
+        SceneManager.LoadScene("Mainmenu"); 
     }
+
     private IEnumerator RestartLevelAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);

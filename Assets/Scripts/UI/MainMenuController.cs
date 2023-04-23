@@ -1,22 +1,28 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+    public Animator animationController;
+
     private float exitHoldTime = 3f;
     private float currentExitHoldTime = 0f;
     private bool exitKeyPressed = false;
+    private bool isAnimationPlaying = false;
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            StartGame();
+            isAnimationPlaying = true;
+            StartCoroutine(PlayAnimationAndLoadNextScene());
         }
 
         if (Input.GetKey(KeyCode.Return))
         {
-            //Debug.Log("start");
+            
             currentExitHoldTime += Time.deltaTime;
             if (currentExitHoldTime >= exitHoldTime)
             {
@@ -29,10 +35,29 @@ public class MainMenuController : MonoBehaviour
         }
     }
 
-    public void StartGame()
+    private IEnumerator PlayAnimationAndLoadNextScene()
     {
+        animationController.SetTrigger("Titles");
+        float animationLength = GetAnimationLength("TitleScreen");
+        yield return new WaitForSeconds(animationLength);
+        animationController.gameObject.SetActive(false);
         SceneManager.LoadScene("MissionLevel_Joe&Allen");
     }
+
+    private float GetAnimationLength(string animationName)
+    {
+        RuntimeAnimatorController ac = animationController.runtimeAnimatorController;
+        for (int i = 0; i < ac.animationClips.Length; i++)
+        {
+            if (ac.animationClips[i].name == animationName)
+            {
+                return ac.animationClips[i].length;
+            }
+        }
+        return 0;
+    }
+
+
 
     public void ExitGame()
     {
