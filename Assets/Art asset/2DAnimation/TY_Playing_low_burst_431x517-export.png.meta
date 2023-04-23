@@ -1,0 +1,1508 @@
+fileFormatVersion: 2
+guid: 6861cbf320a1d304eb573db8d6ec0c22
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3102
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8740b433182224ab4520681f01d0f0
+      internalID: -1948175265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_1
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 3102
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87edcc293fc8dbc43b5382e2070071bd
+      internalID: 345992796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_2
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 3102
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e81a0d430eea8c4cb7c816de686c2ac
+      internalID: 757617030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_3
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 3102
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8922f3f427163b74bb2f521ab40d95d2
+      internalID: 932545902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_4
+      rect:
+        serializedVersion: 2
+        x: 1724
+        y: 3102
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5217c956e39b1343ae1a5b1692ea5f0
+      internalID: 443836796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_5
+      rect:
+        serializedVersion: 2
+        x: 2155
+        y: 3102
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2da45f28cb26a84ba688650f2101fbc
+      internalID: -1742153882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_6
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 3102
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 932336d73fb4ca34bb28c164bca7cb5d
+      internalID: 1013143210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_7
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 3102
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d63db5bfbddb042a7495f9d4f7c319
+      internalID: 1902702698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_8
+      rect:
+        serializedVersion: 2
+        x: 3448
+        y: 3102
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4199c2e989ea64da3e52d077c6d6b8
+      internalID: -1456407803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2585
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378d19b4bb77f7947a3e411d0f7dd078
+      internalID: -48440849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_10
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 2585
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c7032d644a55d42926a4e89ef14050
+      internalID: -1678339656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_11
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 2585
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 457ef8a03ac061846986bf714f2e067d
+      internalID: 1745975741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_12
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 2585
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b308088a53870448dde63e4ef0ce95
+      internalID: -680290049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_13
+      rect:
+        serializedVersion: 2
+        x: 1724
+        y: 2585
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3931a9fa3f06bb4f8fa961ee8dab23a
+      internalID: -1551770564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_14
+      rect:
+        serializedVersion: 2
+        x: 2155
+        y: 2585
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95fcf4922b7fad4cbf0282c8e1561bd
+      internalID: 1483528521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_15
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 2585
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27301b30eee44f341bca78ae17f1bcae
+      internalID: -829901872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_16
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 2585
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1815cc1c68d8f2f4ab519c377128dc0a
+      internalID: -655632858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_17
+      rect:
+        serializedVersion: 2
+        x: 3448
+        y: 2585
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13e7496f023fdf441b2dfdf3d5c12d6c
+      internalID: -1170990539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2068
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f51f166459f01409c8ed0ff87187b1
+      internalID: -1268967772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_19
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 2068
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209b6ab43a56ca34e8a83593912a0fce
+      internalID: 1936764150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_20
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 2068
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4baa8b35b5d6b42b79261c389d8770
+      internalID: -1553382682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_21
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 2068
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2aa5296c228ed444a07b360bd1632de
+      internalID: 1691145114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_22
+      rect:
+        serializedVersion: 2
+        x: 1724
+        y: 2068
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b59dcd065343449936649aa1bbfd7f
+      internalID: 979490764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_23
+      rect:
+        serializedVersion: 2
+        x: 2155
+        y: 2068
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813e4ab1344307b448ef0cfe79c9bf9c
+      internalID: -278241304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_24
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 2068
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d318a86447cfe42952eff252f18775
+      internalID: -174731950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_25
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 2068
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123effde7b4cb41478666f2e1814827c
+      internalID: -2012165040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_26
+      rect:
+        serializedVersion: 2
+        x: 3448
+        y: 2068
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e171642e76b8c49a3b2650213b229c
+      internalID: -1962000180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1551
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bcd30ed1692c1842b5562452d01a055
+      internalID: 1658212354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_28
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 1551
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a51ce4c4ff854840a6af1f83d4db919
+      internalID: -1195321926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_29
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 1551
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefbf603f9b005e4b9f42a64170239f6
+      internalID: 263657003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_30
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 1551
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eeed485482de83418fd7d0ced521bbc
+      internalID: 1770798873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_31
+      rect:
+        serializedVersion: 2
+        x: 1724
+        y: 1551
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c053c52403d6604f83314617f2b8d23
+      internalID: -37181541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_32
+      rect:
+        serializedVersion: 2
+        x: 2155
+        y: 1551
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ddadb523dd16d844bc46c7a2ab7dfd1
+      internalID: 485560283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_33
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 1551
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b763b7c3214a44896ab15314130779
+      internalID: -1344526547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_34
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 1551
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 309535994d532134087bd05e645fc70b
+      internalID: 296269613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_35
+      rect:
+        serializedVersion: 2
+        x: 3448
+        y: 1551
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cfe3734b51f1d049873dd445bdd8a8c
+      internalID: 1789033510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1034
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 972c897fd3f548a4c8041a4b4866c51c
+      internalID: -55886048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_37
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 1034
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898055d7d94107c459f45dd517302b37
+      internalID: 2075810325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_38
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 1034
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8864a83ba20b8e4194e3d70a2ec7a79
+      internalID: -1101775707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_39
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 1034
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d79f4efad28d54da0a1c037f9ca3e8
+      internalID: 965360580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_40
+      rect:
+        serializedVersion: 2
+        x: 1724
+        y: 1034
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c673511baec1a74a8396f8c82bd5fe8
+      internalID: 624167164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_41
+      rect:
+        serializedVersion: 2
+        x: 2155
+        y: 1034
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9db83b93e931634b95fd29fc92f6672
+      internalID: -281993372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_42
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 1034
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2133019e0fe414241a42e7cd4ecddd46
+      internalID: 264786995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_43
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 1034
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7305972e8cbc44dbed3092182db6dd
+      internalID: 380666414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_44
+      rect:
+        serializedVersion: 2
+        x: 3448
+        y: 1034
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92beb6d2a4b1ac7418ae56eb9fe5b618
+      internalID: -860978733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 517
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35523be9ace78594c8f3abf6e7a3db5a
+      internalID: -1560655697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_46
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 517
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f359d0b2b01673498d338dee34c2e75
+      internalID: 131782511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_47
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 517
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d0251d67590344097e76e3fe7e143d
+      internalID: 677062489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_48
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 517
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b34429937af6346a193cf4f1a3ae53
+      internalID: 1080961608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_49
+      rect:
+        serializedVersion: 2
+        x: 1724
+        y: 517
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eaec76ecf4f954469bb357226f037b1
+      internalID: -1305985254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_50
+      rect:
+        serializedVersion: 2
+        x: 2155
+        y: 517
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd44a64e7833844fa8829130109b5c2
+      internalID: -1521857107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_51
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 517
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82de316865f55cf4185876020bb08223
+      internalID: -72826453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_52
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 517
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18488001e88cb24f89d4e594e704840
+      internalID: 868277056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_53
+      rect:
+        serializedVersion: 2
+        x: 3448
+        y: 517
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd64273e900eff14a8b888ea9286eacd
+      internalID: 829058349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3a18ea0cbaf81499ce121ed87f4496
+      internalID: -4987521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_55
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 0
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed14f32347a10024caa5e5cdb8df1913
+      internalID: -660524699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_56
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 0
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9382aeb23619ba49ae2c113cf1022ea
+      internalID: 2032006600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_57
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 0
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ce60d333496b4489a25c2f35e77022
+      internalID: 24404496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_58
+      rect:
+        serializedVersion: 2
+        x: 1724
+        y: 0
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d28ba5485363d4a818d7b28b0bc1b7
+      internalID: -1611166310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_59
+      rect:
+        serializedVersion: 2
+        x: 2155
+        y: 0
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e583cdf392157b478d745cde787c59e
+      internalID: -2004610860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_60
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 0
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aaec82322680294ba052c08576696bf
+      internalID: -1375057603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_61
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 0
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc301f23e3ddfa429592efac7960134
+      internalID: 1488160211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TY_Playing_low_burst_431x517-export_62
+      rect:
+        serializedVersion: 2
+        x: 3448
+        y: 0
+        width: 431
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a37b1af0b211534abdf18b7f0be2925
+      internalID: -1423851687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TY_Playing_low_burst_431x517-export_26: -1962000180
+      TY_Playing_low_burst_431x517-export_47: 677062489
+      TY_Playing_low_burst_431x517-export_5: -1742153882
+      TY_Playing_low_burst_431x517-export_16: -655632858
+      TY_Playing_low_burst_431x517-export_43: 380666414
+      TY_Playing_low_burst_431x517-export_0: -1948175265
+      TY_Playing_low_burst_431x517-export_41: -281993372
+      TY_Playing_low_burst_431x517-export_13: -1551770564
+      TY_Playing_low_burst_431x517-export_39: 965360580
+      TY_Playing_low_burst_431x517-export_22: 979490764
+      TY_Playing_low_burst_431x517-export_1: 345992796
+      TY_Playing_low_burst_431x517-export_33: -1344526547
+      TY_Playing_low_burst_431x517-export_51: -72826453
+      TY_Playing_low_burst_431x517-export_55: -660524699
+      TY_Playing_low_burst_431x517-export_3: 932545902
+      TY_Playing_low_burst_431x517-export_29: 263657003
+      TY_Playing_low_burst_431x517-export_28: -1195321926
+      TY_Playing_low_burst_431x517-export_61: 1488160211
+      TY_Playing_low_burst_431x517-export_14: 1483528521
+      TY_Playing_low_burst_431x517-export_19: 1936764150
+      TY_Playing_low_burst_431x517-export_58: -1611166310
+      TY_Playing_low_burst_431x517-export_24: -174731950
+      TY_Playing_low_burst_431x517-export_6: 1013143210
+      TY_Playing_low_burst_431x517-export_59: -2004610860
+      TY_Playing_low_burst_431x517-export_40: 624167164
+      TY_Playing_low_burst_431x517-export_20: -1553382682
+      TY_Playing_low_burst_431x517-export_4: 443836796
+      TY_Playing_low_burst_431x517-export_12: -680290049
+      TY_Playing_low_burst_431x517-export_45: -1560655697
+      TY_Playing_low_burst_431x517-export_35: 1789033510
+      TY_Playing_low_burst_431x517-export_32: 485560283
+      TY_Playing_low_burst_431x517-export_54: -4987521
+      TY_Playing_low_burst_431x517-export_2: 757617030
+      TY_Playing_low_burst_431x517-export_27: 1658212354
+      TY_Playing_low_burst_431x517-export_44: -860978733
+      TY_Playing_low_burst_431x517-export_50: -1521857107
+      TY_Playing_low_burst_431x517-export_48: 1080961608
+      TY_Playing_low_burst_431x517-export_34: 296269613
+      TY_Playing_low_burst_431x517-export_23: -278241304
+      TY_Playing_low_burst_431x517-export_57: 24404496
+      TY_Playing_low_burst_431x517-export_10: -1678339656
+      TY_Playing_low_burst_431x517-export_60: -1375057603
+      TY_Playing_low_burst_431x517-export_52: 868277056
+      TY_Playing_low_burst_431x517-export_8: -1456407803
+      TY_Playing_low_burst_431x517-export_17: -1170990539
+      TY_Playing_low_burst_431x517-export_15: -829901872
+      TY_Playing_low_burst_431x517-export_37: 2075810325
+      TY_Playing_low_burst_431x517-export_62: -1423851687
+      TY_Playing_low_burst_431x517-export_56: 2032006600
+      TY_Playing_low_burst_431x517-export_53: 829058349
+      TY_Playing_low_burst_431x517-export_49: -1305985254
+      TY_Playing_low_burst_431x517-export_25: -2012165040
+      TY_Playing_low_burst_431x517-export_36: -55886048
+      TY_Playing_low_burst_431x517-export_11: 1745975741
+      TY_Playing_low_burst_431x517-export_46: 131782511
+      TY_Playing_low_burst_431x517-export_38: -1101775707
+      TY_Playing_low_burst_431x517-export_9: -48440849
+      TY_Playing_low_burst_431x517-export_7: 1902702698
+      TY_Playing_low_burst_431x517-export_21: 1691145114
+      TY_Playing_low_burst_431x517-export_30: 1770798873
+      TY_Playing_low_burst_431x517-export_18: -1268967772
+      TY_Playing_low_burst_431x517-export_31: -37181541
+      TY_Playing_low_burst_431x517-export_42: 264786995
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
