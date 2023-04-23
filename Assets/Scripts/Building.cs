@@ -28,7 +28,7 @@ public class Building : MonoBehaviour
             {
                 isBroken = true;
                 GameplayManager controller = GameplayManager.Instance;
-                controller.UpdateGameScore(controller.socreAward);
+                controller.UpdateGameScore(controller.buildingDestroyAward);
 
                 originModel.SetActive(!isBroken);
                 brokenModel.SetActive(isBroken);
