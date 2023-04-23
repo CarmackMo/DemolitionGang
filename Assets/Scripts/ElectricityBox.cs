@@ -20,7 +20,7 @@ public class ElectricityBox : MonoBehaviour
             {
                 isBroken = true;
                 GameplayManager controller = GameplayManager.Instance;
-                controller.UpdateGameScore(controller.socreAward);
+                controller.UpdateGameScore(controller.scoreAward);
                 SoundEffectManager manager = SoundEffectManager.Instance;
                 manager.PlayOneShot(manager.singleAudioSourceList[1], "Collision");
 

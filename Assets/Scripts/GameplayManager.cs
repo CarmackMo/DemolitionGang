@@ -34,7 +34,9 @@ public class GameplayManager : DestroyableSingleton<GameplayManager>
     public float totalGameTime = 0f;
     public float scoreFactor = 100f;
     public float socrePunishment = 500f;
-    public float socreAward = 2000f;
+    public float scoreAward = 1000f;
+    public float wallDestroyAward = 1000f;
+    public float buildingDestroyAward = 10000f;
 
     [Header("Debug")]
     /* Left btn 1 (A): Boom quick fix; 
