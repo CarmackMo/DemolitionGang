@@ -67,6 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ea634a6f406b479d44a0b745497ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  despawnInterval: 15
   smoke: {fileID: 4893592406297710028}
   collisionCallbacks:
   - {fileID: 8657583642853060495}
@@ -174,6 +175,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3740080019911407841}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &7945990753559262733
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4550332340783007152}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15477374, y: 0.06589715, z: 0.12061317}
+  m_Center: {x: -0.0016339779, y: 0.03213068, z: -0.0076026535}
 --- !u!95 &6369917859991040744
 Animator:
   serializedVersion: 4
@@ -194,19 +208,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &7945990753559262733
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4550332340783007152}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.15477374, y: 0.06589715, z: 0.12061317}
-  m_Center: {x: -0.0016339779, y: 0.03213068, z: -0.0076026535}
 --- !u!114 &8657583642853060495
 MonoBehaviour:
   m_ObjectHideFlags: 0
