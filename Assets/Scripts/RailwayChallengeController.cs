@@ -33,7 +33,7 @@ public class RailwayChallengeController : MonoBehaviour
             uiText.text = "Press Button to Interact";
             uiText.gameObject.SetActive(true);
 
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 excavator.transform.position = startPoint.transform.position;
                 excavator.transform.rotation = startPoint.transform.rotation;
@@ -48,7 +48,7 @@ public class RailwayChallengeController : MonoBehaviour
 
         if (isChallenging)
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 excavator.transform.position = respawnPosition;
                 excavator.transform.rotation = respawnRotation;
