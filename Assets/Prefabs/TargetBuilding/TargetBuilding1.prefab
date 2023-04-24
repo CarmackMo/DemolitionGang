@@ -57,6 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ea634a6f406b479d44a0b745497ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  despawnInterval: 15
   smoke: {fileID: 5741031025605297003}
   collisionCallbacks:
   - {fileID: 6173104168520769391}
