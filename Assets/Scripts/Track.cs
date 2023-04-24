@@ -5,8 +5,9 @@ using UnityEngine;
 public class Track : MonoBehaviour
 {
     public List<CollisionCallback> collisionCallbackList;
-    public CollisionCallback enterCallback;
-    public CollisionCallback exitCallback;
+
+    public List<RailwayChallengeController> railwayChallengeControllers;
+
 
     public void Start()
     {
@@ -16,27 +17,20 @@ public class Track : MonoBehaviour
 
     private void Init()
     {
-        foreach(CollisionCallback callback in collisionCallbackList)
+        foreach (RailwayChallengeController controller in railwayChallengeControllers)
         {
-            callback.AddCallback(OnOutOfBound, null, "Excavator");
+            foreach (CollisionCallback callback in collisionCallbackList)
+            {
+                callback.AddCallback(controller.OnChallengeFailed, null, "Excavator");
+            }
         }
-
-        enterCallback.AddCallback(OnExcavatorEnter, null, "Excavator");
-        exitCallback.AddCallback(OnExcavatorExit, null, "Excavator");
     }
 
-    private void OnOutOfBound(GameObject hitObject)
+
+    private void OnChallengeFailed(GameObject hitObject)
     {
         Debug.LogWarning("Excavator hits the boundary of the track!! ");
     }
 
-    private void OnExcavatorEnter(GameObject hitObject)
-    {
-        Excavator.Instance.UpdateSpeedBounsTrigger(true);
-    }
 
-    private void OnExcavatorExit(GameObject hitObject)
-    {
-        Excavator.Instance.UpdateSpeedBounsTrigger(false);
-    }
 }

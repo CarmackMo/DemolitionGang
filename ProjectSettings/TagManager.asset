@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Excavator
   - Victim
+  - Destination
+  - ChallengeStart
   layers:
   - Default
   - TransparentFX

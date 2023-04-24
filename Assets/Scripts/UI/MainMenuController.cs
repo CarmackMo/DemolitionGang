@@ -16,7 +16,7 @@ public class MainMenuController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            isAnimationPlaying = true;
+            isAnimationPlaying = true;    
             StartCoroutine(PlayAnimationAndLoadNextScene());
         }
 

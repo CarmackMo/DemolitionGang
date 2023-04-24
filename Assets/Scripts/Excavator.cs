@@ -55,6 +55,7 @@ public class Excavator : DestroyableSingleton<Excavator>
     private bool isBoomReachLimit = false;
     private bool isArmReachLimit = false;
     private bool isQuickFixStart = false;
+    private bool canRespawn = true;
     private float boomLimitStartTime = 0.0f;
     private float armLimitStartTime = 0.0f;
     private float quickFixStartTime = 0.0f;
@@ -69,6 +70,7 @@ public class Excavator : DestroyableSingleton<Excavator>
     public int EngineRPM => engineRPM;
     public Vector3 respawnPoint;
     public Action<string> hornAction;
+    public DestinationManager destinationManager;
 
 
     public enum EngineState { ON = 1, IGNITE = 0, OFF = -1 }
@@ -102,7 +104,7 @@ public class Excavator : DestroyableSingleton<Excavator>
         soundManager = SoundEffectManager.Instance;
         gameplayPanel = GameplayPanel.Instance;
         hardwareManager.OnStick2ChangeAction += IgniteListener;
-
+        destinationManager = FindObjectOfType<DestinationManager>();
         InitExcavator();
 
         curHp = Hp;
@@ -583,17 +585,36 @@ public class Excavator : DestroyableSingleton<Excavator>
     }
 
 
-    private void RespawnListener()
+    public void RespawnListener()
     {
-        if (Input.GetKeyUp(KeyCode.Return))
+        if ( canRespawn && Input.GetKeyUp(KeyCode.Return))
         {
             transform.position = respawnPoint;
             transform.rotation = Quaternion.identity;
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Destination"))
+        {
+            destinationManager.DestinationReached();
+        }
+
+        if (other.CompareTag("ChallengeStart"))
+        {
+            canRespawn = false;
+        }
+    }
 
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("ChallengeStart"))
+        {
+            canRespawn = true;
+        }
+    }
 
     private IEnumerator IgniteCoroutine()
     {
