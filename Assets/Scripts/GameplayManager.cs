@@ -56,16 +56,21 @@ public class GameplayManager : DestroyableSingleton<GameplayManager>
     public GameState gameState = GameState.UNSTARTED;
 
 
+    private int completedChallengesScore = 0;
     private float currentGameTime = 0f;
     private float timeScore = 0f;
     private float actionScore = 0f;
     public float CurrentGameTime { get { return currentGameTime; } }
     public int TimeScore { get { return Mathf.FloorToInt(timeScore); } }
     public int ActionScore { get { return Mathf.FloorToInt(actionScore); } }
-    public int TotalScore { get { return Mathf.FloorToInt(timeScore + actionScore); } }
 
-    
-    
+    public int ChallengesAndActionScore { get { return Mathf.FloorToInt(completedChallengesScore + ActionScore); } }
+    public int TotalScore { get { return Mathf.FloorToInt(timeScore + actionScore + completedChallengesScore);  } }
+
+
+
+
+
     protected override void Start()
     {
         base.Start();
@@ -222,6 +227,10 @@ public class GameplayManager : DestroyableSingleton<GameplayManager>
         }
     }
 
+    public void AddCompletedChallengeScore(int rewardScore)
+    {
+        completedChallengesScore += rewardScore;
+    }
 
 
     IEnumerator TimeCountDownCoroutine()

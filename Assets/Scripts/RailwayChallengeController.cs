@@ -11,10 +11,14 @@ public class RailwayChallengeController : MonoBehaviour
     public GameObject endPoint;
     public List<Collider> leftBoundaries;
     public List<Collider> rightBoundaries;
-    public TextMeshProUGUI uiText;
+    public TextMeshProUGUI uiText1;
+    public TextMeshProUGUI uiText2;
+    public TextMeshProUGUI uiText3;
+    public int rewardScore = 1000;
 
     public List<CollisionCallback> collisionCallbacks;
 
+    public GameplayManager playerScore;
 
     private Vector3 respawnPosition;
     private Quaternion respawnRotation;
@@ -25,9 +29,11 @@ public class RailwayChallengeController : MonoBehaviour
     {
         respawnPosition = excavator.transform.position;
         respawnRotation = excavator.transform.rotation;
-        uiText.gameObject.SetActive(false);
+        uiText1.gameObject.SetActive(false);
+        uiText2.gameObject.SetActive(false);
+        uiText3.gameObject.SetActive(false);
 
-        foreach(CollisionCallback callback in collisionCallbacks)
+        foreach (CollisionCallback callback in collisionCallbacks)
         {
             callback.AddCallback(OnExcavatorHitBoundary, null, "Excavator");
         }
@@ -39,8 +45,8 @@ public class RailwayChallengeController : MonoBehaviour
 
         if (!isChallenging && distanceToRail < 10f) // Adjust the distance according to your needs
         {
-            uiText.text = "Press Button to Interact";
-            uiText.gameObject.SetActive(true);
+            uiText1.text = "Press Button to Interact";
+            uiText1.gameObject.SetActive(true);
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -54,7 +60,7 @@ public class RailwayChallengeController : MonoBehaviour
         }
         else
         {
-            uiText.gameObject.SetActive(false);
+            uiText1.gameObject.SetActive(false);
         }
 
         if (isChallenging)
@@ -91,23 +97,25 @@ public class RailwayChallengeController : MonoBehaviour
 
             if (outOfBounds && isChallenging)
             {
-                uiText.text = "Challenge Failed";
-                uiText.gameObject.SetActive(true);
+                uiText2.text = "Challenge Failed";
+                uiText2.gameObject.SetActive(true);
+                StartCoroutine(DisableUITextAfterSeconds(5));
                 isChallenging = false;
             }
             else
             {
-                uiText.gameObject.SetActive(false);
+                uiText2.gameObject.SetActive(false);
             }
 
             float distanceToEnd = Vector3.Distance(excavator.transform.position, endPoint.transform.position);
             if (isChallenging && distanceToEnd < 5.0f)
             {
 
-                uiText.text = "Challenge Complete";
-                uiText.gameObject.SetActive(true);
+                uiText3.text = "Challenge Complete";
+                uiText3.gameObject.SetActive(true);
                 StartCoroutine(DisableUITextAfterSeconds(5));
                 isChallenging = false;
+                playerScore.AddCompletedChallengeScore(rewardScore);
             }
             foreach (CollisionCallback callback in collisionCallbacks)
             {
@@ -120,8 +128,8 @@ public class RailwayChallengeController : MonoBehaviour
     {
         if ( outOfBounds && isChallenging)
         {
-            uiText.text = "Challenge Failed";
-            uiText.gameObject.SetActive(true);
+            uiText3.text = "Challenge Failed";
+            uiText3.gameObject.SetActive(true);
             isChallenging = false;
             StartCoroutine(DisableUITextAfterSeconds(5));
         }
@@ -154,6 +162,7 @@ public class RailwayChallengeController : MonoBehaviour
     IEnumerator DisableUITextAfterSeconds(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        uiText.gameObject.SetActive(false);
+        uiText2.gameObject.SetActive(false);
+        uiText3.gameObject.SetActive(false);
     }
 }

@@ -78,7 +78,7 @@ public class GameplayPanel : DestroyableSingleton<GameplayPanel>
 
     private void UpdateGameSocre()
     {
-        scoreText.text = $"{GameplayManager.Instance.ActionScore}";
+        scoreText.text = $"{GameplayManager.Instance.ChallengesAndActionScore}";
         bonusText.text = $"{GameplayManager.Instance.TimeScore}";
     }
 
