@@ -100,15 +100,17 @@ public class HardwareManager : DontDestroySingleton<HardwareManager>
         }
         else if (data.Length == 2 && data.Substring(0, 1) == "C")
         {
-            if (data.Substring(1) == "T")
+            if (data.Substring(1) == "F")
             {
                 wireConnectedThisFrame = true;
                 isWireConnected = true;
+                Debug.Log($"Set isWireConnected TRUE");
             }
-            else if (data.Substring(1) == "F")
+            else if (data.Substring(1) == "T")
             {
                 wireDisconnectedThisFrame = true;
                 isWireConnected = false;
+                Debug.Log($"Set isWireConnected FALSE");
             }
         }
         else if (data.Length > 2 && data.Substring(0, 2) == "IG")
