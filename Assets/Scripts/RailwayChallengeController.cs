@@ -89,7 +89,7 @@ public class RailwayChallengeController : MonoBehaviour
             //    }
             //}
 
-            if (outOfBounds)
+            if (outOfBounds && isChallenging)
             {
                 uiText.text = "Challenge Failed";
                 uiText.gameObject.SetActive(true);
@@ -101,23 +101,29 @@ public class RailwayChallengeController : MonoBehaviour
             }
 
             float distanceToEnd = Vector3.Distance(excavator.transform.position, endPoint.transform.position);
-            if (distanceToEnd < 1.0f)
+            if (isChallenging && distanceToEnd < 5.0f)
             {
+
                 uiText.text = "Challenge Complete";
                 uiText.gameObject.SetActive(true);
                 StartCoroutine(DisableUITextAfterSeconds(5));
                 isChallenging = false;
+            }
+            foreach (CollisionCallback callback in collisionCallbacks)
+            {
+                callback.AddCallback(OnExcavatorHitEnd, null, "Excavator");
             }
         }
     }
 
     public void OnChallengeFailed(GameObject hitObject)
     {
-        if (isChallenging)
+        if ( outOfBounds && isChallenging)
         {
             uiText.text = "Challenge Failed";
             uiText.gameObject.SetActive(true);
             isChallenging = false;
+            StartCoroutine(DisableUITextAfterSeconds(5));
         }
     }
 
@@ -125,6 +131,18 @@ public class RailwayChallengeController : MonoBehaviour
     {
         outOfBounds = true;
         Debug.Log($"Excavator hit bounary {bound.name}" );
+        //uiText.text = "Challenge Failed";
+        //uiText.gameObject.SetActive(true);
+        //isChallenging = false;
+    }
+
+    public void OnExcavatorHitEnd(GameObject End)
+    {
+        outOfBounds = true;
+        Debug.Log($"Excavator hit End {End.name}");
+        //uiText.text = "Challenge Complete";
+        //uiText.gameObject.SetActive(true);
+        //StartCoroutine(DisableUITextAfterSeconds(5));
     }
 
     public void SetActiveChallenge(bool active)
