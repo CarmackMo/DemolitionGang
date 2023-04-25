@@ -72,10 +72,12 @@ public class HardwareManager : DontDestroySingleton<HardwareManager>
         wireConnectedThisFrame = false;
         wireDisconnectedThisFrame = false;
 
-        if (Input.GetKeyDown("space"))
-        {
-            LightUp(100);
-        }
+        //if (Input.GetKeyDown("space"))
+        //{
+        //    LightUp(100);
+        //}
+        if (isWireConnected)
+            Debug.Log("Wire connected !!");
     }
 
     /* All possbile data messages from hardware:

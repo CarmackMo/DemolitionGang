@@ -159,6 +159,7 @@ public class Excavator : DestroyableSingleton<Excavator>
             float leftSpeed, rightSpeed, speed;
             GameplayManager.JoySitckConfig leftStick = gameManager.sticks[0];
             GameplayManager.JoySitckConfig rightStick = gameManager.sticks[5];
+            //GameplayManager.JoySitckConfig rightStick = gameManager.sticks[3];
 
             /* First control plan: two joystick control two vehicle tracks respectively */
             if (leftStick.stickState == GameplayManager.StickState.DECELERATE)
@@ -337,6 +338,7 @@ public class Excavator : DestroyableSingleton<Excavator>
         float angularSpeed = 0.0f;
         if (engineState == EngineState.ON && armState == DamageState.FIXED)
         {
+            //GameplayManager.JoySitckConfig stick = gameManager.sticks[5];
             GameplayManager.JoySitckConfig stick = gameManager.sticks[3];
             angularSpeed = (int)stick.stickState * angualrSpeedRate * Time.deltaTime;
             Vector3 axis = arm.transform.forward;
@@ -463,6 +465,7 @@ public class Excavator : DestroyableSingleton<Excavator>
             {
                 isQuickFixStart = true;
                 quickFixStartTime = Time.fixedTime;
+                UnityEngine.Debug.Log("Quck fix Start!");
             }
 
             if (hardwareManager.IsWireConnected == true && isQuickFixStart == true)
@@ -473,13 +476,13 @@ public class Excavator : DestroyableSingleton<Excavator>
                     armState = DamageState.FIXED;
                     isQuickFixStart = false;
                     gameplayPanel.UpdateBrokenVisibility(false);
-                    UnityEngine.Debug.LogWarning("Quck fix finish!");
+                    UnityEngine.Debug.Log("Quck fix finish!");
                 }
             }
             else if (hardwareManager.IsWireConnected == false && isQuickFixStart == true)
             {
                 isQuickFixStart = false;
-                UnityEngine.Debug.LogWarning("Quck fix unfinish!");
+                UnityEngine.Debug.Log("Quck fix unfinish!");
             }
         }
     }
