@@ -134,10 +134,10 @@ public class AlertManager : DestroyableSingleton<AlertManager>
     }
 
 
-
+    /*
     void OnGUI()
     {
         GUI.TextArea(new Rect(0, 300, 250, 40), $"Alert : {alert}");
     }
-
+    */
 }
