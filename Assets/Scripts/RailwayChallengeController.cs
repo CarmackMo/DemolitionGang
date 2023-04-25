@@ -45,7 +45,7 @@ public class RailwayChallengeController : MonoBehaviour
 
         if (!isChallenging && distanceToRail < 10f) // Adjust the distance according to your needs
         {
-            uiText1.text = "Press Button to Interact";
+            uiText1.text = "Press SPACE to Interact";
             uiText1.gameObject.SetActive(true);
 
             if (Input.GetKeyDown(KeyCode.Space))
