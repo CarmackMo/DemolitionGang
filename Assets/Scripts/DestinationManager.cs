@@ -9,6 +9,7 @@ public class DestinationManager : MonoBehaviour
 {
     [SerializeField]
     private List<Transform> destinationPoints;
+    public List<string> destinationTexts;
 
     [SerializeField]
     private GameObject destinationPrefab;
@@ -44,7 +45,7 @@ public class DestinationManager : MonoBehaviour
     private void SpawnDestination()
     {
         currentDestinationObject = Instantiate(destinationPrefab, destinationPoints[currentDestinationIndex].position, Quaternion.identity);
-        destinationText.text = $"Next Destination: {destinationPoints[currentDestinationIndex].position}";
+        destinationText.text = destinationTexts[currentDestinationIndex];
     }
 
     private void LevelCleared()

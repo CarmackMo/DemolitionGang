@@ -41,7 +41,7 @@ public class MainMenuController : MonoBehaviour
         float animationLength = GetAnimationLength("TitleScreen");
         yield return new WaitForSeconds(animationLength);
         animationController.gameObject.SetActive(false);
-        SceneManager.LoadScene("MissionLevel_Joe&Allen");
+        SceneManager.LoadScene("MissionLevel_in PROGRESS");
     }
 
     private float GetAnimationLength(string animationName)
