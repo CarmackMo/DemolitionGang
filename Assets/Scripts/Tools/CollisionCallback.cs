@@ -16,39 +16,11 @@ public class CollisionCallback : MonoBehaviour
     private List<Type> targetTypes = new List<Type>();
 
 
-
-
-
     public delegate void OnCollision(GameObject hitObject);
 
     private List<OnCollision> callbacks = new List<OnCollision>();
 
-    public void AddCallback(OnCollision callback, string tagFilter)
-    {
-        callbacks.Add((GameObject hitObject) =>
-        {
-            if (hitObject.CompareTag(tagFilter) || string.IsNullOrEmpty(tagFilter))
-            {
-                callback(hitObject);
-            }
-        });
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        private void Awake()
+    private void Awake()
     {
         CheckValidation();
     }
@@ -63,12 +35,6 @@ public class CollisionCallback : MonoBehaviour
     {
         //Debug.LogWarning("OnCollisionEnter");
         InvokeCallback(collision.gameObject);
-        {
-            foreach (var callback in callbacks)
-            {
-                callback(collision.gameObject);
-            }
-        }
     }
 
     /// <summary>

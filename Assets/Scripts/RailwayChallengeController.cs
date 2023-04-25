@@ -13,15 +13,24 @@ public class RailwayChallengeController : MonoBehaviour
     public List<Collider> rightBoundaries;
     public TextMeshProUGUI uiText;
 
+    public List<CollisionCallback> collisionCallbacks;
+
+
     private Vector3 respawnPosition;
     private Quaternion respawnRotation;
     private bool isChallenging = false;
+    private bool outOfBounds = false;
 
     private void Start()
     {
         respawnPosition = excavator.transform.position;
         respawnRotation = excavator.transform.rotation;
         uiText.gameObject.SetActive(false);
+
+        foreach(CollisionCallback callback in collisionCallbacks)
+        {
+            callback.AddCallback(OnExcavatorHitBoundary, null, "Excavator");
+        }
     }
 
     private void Update()
@@ -40,6 +49,7 @@ public class RailwayChallengeController : MonoBehaviour
                 respawnPosition = startPoint.transform.position;
                 respawnRotation = startPoint.transform.rotation;
                 isChallenging = true;
+                outOfBounds = false;
             }
         }
         else
@@ -53,27 +63,31 @@ public class RailwayChallengeController : MonoBehaviour
             {
                 excavator.transform.position = respawnPosition;
                 excavator.transform.rotation = respawnRotation;
+                outOfBounds = false;
             }
 
-            bool outOfBounds = false;
-            foreach (Collider boundary in leftBoundaries)
-            {
-                if (Physics.Raycast(excavator.transform.position, boundary.transform.position, 1.0f))
-                {
-                    Debug.Log("0101");
-                    outOfBounds = true;
-                    break;
-                }
-            }
-            foreach (Collider boundary in rightBoundaries)
-            {
-                if (Physics.Raycast(excavator.transform.position, boundary.transform.position, 1.0f))
-                {
-                    Debug.Log("0202");
-                    outOfBounds = true;
-                    break;
-                }
-            }
+            
+
+
+
+            //foreach (Collider boundary in leftBoundaries)
+            //{
+            //    if (Physics.Raycast(excavator.transform.position, boundary.transform.position, 1.0f))
+            //    {
+            //        Debug.Log("0101");
+            //        outOfBounds = true;
+            //        break;
+            //    }
+            //}
+            //foreach (Collider boundary in rightBoundaries)
+            //{
+            //    if (Physics.Raycast(excavator.transform.position, boundary.transform.position, 1.0f))
+            //    {
+            //        Debug.Log("0202");
+            //        outOfBounds = true;
+            //        break;
+            //    }
+            //}
 
             if (outOfBounds)
             {
@@ -105,6 +119,12 @@ public class RailwayChallengeController : MonoBehaviour
             uiText.gameObject.SetActive(true);
             isChallenging = false;
         }
+    }
+
+    public void OnExcavatorHitBoundary(GameObject bound)
+    {
+        outOfBounds = true;
+        Debug.Log($"Excavator hit bounary {bound.name}" );
     }
 
     public void SetActiveChallenge(bool active)

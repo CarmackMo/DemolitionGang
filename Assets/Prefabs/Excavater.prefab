@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 437388728629368869}
   m_Layer: 0
   m_Name: Excavater
-  m_TagString: Untagged
+  m_TagString: Excavator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -207,6 +207,7 @@ MonoBehaviour:
   leftTrackAnimator: {fileID: 8778790985401660267}
   isBucketRotating: 0
   respawnPoint: {x: 0, y: 0, z: 0}
+  destinationManager: {fileID: 0}
   ImgHp: {fileID: 0}
   Damage: 20
   Hp: 100
