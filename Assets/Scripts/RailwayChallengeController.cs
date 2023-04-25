@@ -59,6 +59,7 @@ public class RailwayChallengeController : MonoBehaviour
             {
                 if (Physics.Raycast(excavator.transform.position, boundary.transform.position, 1.0f))
                 {
+                    Debug.Log("0101");
                     outOfBounds = true;
                     break;
                 }
@@ -67,6 +68,7 @@ public class RailwayChallengeController : MonoBehaviour
             {
                 if (Physics.Raycast(excavator.transform.position, boundary.transform.position, 1.0f))
                 {
+                    Debug.Log("0202");
                     outOfBounds = true;
                     break;
                 }
