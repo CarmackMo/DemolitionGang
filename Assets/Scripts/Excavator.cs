@@ -737,6 +737,7 @@ public class Excavator : DestroyableSingleton<Excavator>
 
 
     // Show some data 
+    /*
     void OnGUI()
     {
         List<GameplayManager.JoySitckConfig> sticks = gameManager.sticks;
@@ -747,6 +748,7 @@ public class Excavator : DestroyableSingleton<Excavator>
         GUI.TextArea(new Rect(0, 250, 250, 40), $"Engine RPM : {engineRPM}");
         //GUI.TextArea(new Rect(0, 240, 250, 40), $"JoyStick Button : {Input.GetKey(KeyCode.Joystick1Button2)}");
     }
+    */
 
     //private void ShowBreakTip()
     //{
