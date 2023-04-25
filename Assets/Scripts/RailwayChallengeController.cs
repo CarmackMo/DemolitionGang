@@ -38,6 +38,7 @@ public class RailwayChallengeController : MonoBehaviour
                 excavator.transform.position = startPoint.transform.position;
                 excavator.transform.rotation = startPoint.transform.rotation;
                 respawnPosition = startPoint.transform.position;
+                respawnRotation = startPoint.transform.rotation;
                 isChallenging = true;
             }
         }
